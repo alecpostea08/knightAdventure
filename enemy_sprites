@@ -1,0 +1,19 @@
+import pygame
+import os
+
+enemy_attack_sheet = pygame.image.load(os.path.join('graphics','enemy_Attack_3.png'))
+enemy_idle_sheet = pygame.image.load(os.path.join('graphics','enemy_Idle.png'))
+enemy_run_sheet = pygame.image.load(os.path.join('graphics','enemy_Run.png'))
+enemy_walk_sheet = pygame.image.load(os.path.join('graphics','enemy_Walk.png'))
+
+def get_sprites(sheet, x, y, width, height):
+    image = pygame.surface((width, height), pygame.SRCALPHA).convert_alpha()
+    image.blit(sheet, (0, 0), (x, y, width, height))
+
+#enemy_attack = get_sprites(enemy_attack_sheet,10,30,40,50)
+#enemy_attack = pygame.transform.scale(enemy_attack_sheet,(150,135))
+
+# enemy_attack_frames = extract_enemy_frames(enemy_attack_sprite_sheet, enemy_frame_width, enemy_frame_height, enemy_num_frames)
+# enemy_attack_sprite_sheet = pygame.image.load('enemy_Attack_3.png').convert_alpha()
+# current_enemy_anim = None
+  
